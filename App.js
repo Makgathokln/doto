@@ -9,8 +9,8 @@ export default function App() {
 
   const Stack = createNativeStackNavigator()
   return (
-    <NavigationContainer>
-      <Stack.Navigator initialRouteName={'home'} >
+    <NavigationContainer screenOptions={{headerShown:false}}>
+      <Stack.Navigator initialRouteName={'home'} screenOptions={{headerShown:false}} >
       <Stack.Screen name={'home'} component={Landing} />
 
         <Stack.Screen name={'Adduser'} component={Adduser} />

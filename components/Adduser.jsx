@@ -30,17 +30,21 @@ const Adduser = ({navigation}) => {
         <>
         <SafeAreaView>
             <Header>
-            <Icon name='book' color="#fff"  style={{marginTop:2}} /> 
+            {/* <Icon name='book' color="#fff"  />  */}
+
+            <Icon name="keyboard-arrow-left" size={38} color='#fff' style={{marginTop:2}}  onPress={navigation.goBack} />
+            <Text style={{fontSize: 30, color:'#fff', fontWeight:'bold', textAlign:'center', marginBottom: 20, marginTop: 20}}>Create Todo</Text>
+
             </Header>
             
             
             <View>
 
 
-            <Text style={{fontSize: 30, color:'#ff0066', fontWeight:'bold', textAlign:'center', marginBottom: 20, marginTop: 20}}>Add new Todo</Text>
+            {/* <Text style={{fontSize: 30, color:'#ff0066', fontWeight:'bold', textAlign:'center', marginBottom: 20, marginTop: 20}}>Add new Todo</Text> */}
             </View>
 
-            <View>
+        <View style={{marginTop:40}}>
                 <TextInput style={styles.textinput} onChangeText={ text => setTitle(text)} placeholder={"Please enter your title"}/>
                 <TextInput style={styles.textinput} onChangeText={ text => setSubTitle(text)} placeholder={"Please enter your sub-title"}/>
                 <TextInput style={styles.textinput}  onChangeText={ text => setDsc(text)} placeholder={"Please enter your description"}/>
@@ -48,7 +52,7 @@ const Adduser = ({navigation}) => {
             </View>
 
             <View  style={{flexDirection:'row', flexWrap:'wrap',position: 'absolute',bottom:-60, marginLeft:20,flex:1,justifyContent: "space-around"}}>
-                <Button style={{marginTop:90, marginBottom:90}} title={"Submit Todo"} onPress={createTodo}/>
+                <Button style={{marginTop:90, marginBottom:90}} title={"Submit"} onPress={createTodo}/>
 
             </View>
         </SafeAreaView>

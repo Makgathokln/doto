@@ -99,8 +99,8 @@ db.ref('/todo').remove()
         <SafeAreaView>
         <Header
   placement="left"
-  leftComponent={{ icon: 'menu', color: '#fff' }}
-  rightComponent={{ icon: 'home', color: '#fff' }}
+  leftComponent={{ icon: 'home', color: '#fff' }}
+  rightComponent={{ icon: 'menu', color: '#fff' }}
 />
 <View >
     <Text style={{fontSize:30, color:'#ff0066', fontWeight:'bold', textAlign:'center', marginTop:20, marginBottom:20}}>Todo App</Text>

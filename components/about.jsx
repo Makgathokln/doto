@@ -59,27 +59,29 @@ return(
     <>
     <SafeAreaView>
         <Header>
-            
-            <Icon name='edit' color="#fff" style={{marginTop:2}} />           
+        <Icon name="keyboard-arrow-left" size={38} color='#fff' style={{marginTop:2}}  onPress={navigation.goBack} />
+        <Text style={{fontSize: 30, color:'#fff', fontWeight:'bold', textAlign:'center', marginBottom: 20, marginTop: 20}}>Update Todo</Text>
+
+            {/* <Icon name='edit' color="#fff" style={{marginRight:50}} />            */}
         </Header>
 
         <View>
-        <Text style={{fontSize: 30, color:'#ff0066', fontWeight:'bold', textAlign:'center', marginBottom: 20, marginTop: 20}}> Update Todo</Text>
+        {/* <Text style={{fontSize: 30, color:'#ff0066', fontWeight:'bold', textAlign:'center', marginBottom: 20, marginTop: 20}}> Update Todo</Text> */}
 
            
         </View>    
         
-        <View>
+        <View style={{marginTop:40}}>
                 <TextInput style={styles.textinput} value={title}  onChangeText={ text => setTitle(text)} placeholder={"Please enter your title"}/>
                 <TextInput style={styles.textinput} value={subTitle}  onChangeText={ text => setSubTitle(text)} placeholder={"Please enter your subtitle"}/>
                 <TextInput style={styles.textinput} value={dsc}  onChangeText={ text => setDsc(text)} placeholder={"Please enter your description"}/>
 
             </View>
 
-            <View  style={{flexDirection:'row', flexWrap:'wrap',position: 'absolute',bottom:-60, marginLeft:20,flex:1,justifyContent: "space-around"}}>
+            <View  style={{flexDirection:'row',justifyContent:'space-evenly', alignContent:'stretch',bottom:-60, marginLeft:20,flex:1,justifyContent: "space-around"}}>
              
-                <Button style={{right:80}} title={"Update"} onPress={edit}/>
-                <Button style={{marginLeft:-120}} title={"Delete"} onPress={deleteTask}/>
+                <Button  title={"Update"} onPress={edit}/>
+                <Button  title={"Delete"} onPress={deleteTask}/>
 
             </View>
     </SafeAreaView>
